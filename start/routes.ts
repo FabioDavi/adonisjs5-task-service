@@ -26,4 +26,6 @@ Route.get('/about', async () => {
      return 'this is the about page'  
  })
   
-// Route.get('/contact', async()=>{return 'this is the contact page'})
+Route.get('/contact', async()=>{return 'this is the contact page'})   
+
+
