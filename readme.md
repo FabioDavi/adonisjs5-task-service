@@ -4,11 +4,9 @@
 // ir para a pasta do projeto
 cd tasklist
 
-//iniciando o server (usar o help dos comandos)
-node ace serve
-
 //ir para o visual studio
 code .
+node ace serve --watch (like nodemoon)
 
 //git
 git init
