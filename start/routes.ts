@@ -21,12 +21,8 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', 'PagesController.home')
-Route.get('/about', 'PagesController.about')   
-Route.get('/contact', 'PagesController.contact')   
-
+Route.get('/about', 'PagesController.about').as('about')
+Route.get('/contact', 'PagesController.contact').as('contact')
 
 Route.get('/test/:name?', 'PagesController.test')
-  
-
-
-
+//http://0.0.0.0:3333/test/fabio
