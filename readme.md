@@ -8,6 +8,11 @@ cd tasklist
 code .
 node ace serve --watch (like nodemoon)
 
+//considerações
+//nesta versão do adonisjs não tem mais cli,,, é ACE directly
+node ace --help
+node ace serve --help (para info especificos de cada comando)
+
 //git
 git init
 git push -u origin master
