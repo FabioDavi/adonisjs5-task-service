@@ -5,20 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tasklist</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-  <nav class="navbar is-link">
-    <div class="container">
-      <div class="navbar-brand">
-        <a href="/" class="navbar-item">
-          Tasklist
-        </a>
-      </div>
-  </div>
-  </nav>
+  
+  <!--@include('layouts/partials/_navbar')  não funcioa este include -->
+  
   <section class="section">
     <div class="container">
-     
+      @!section('content')
     </div>
   </section>
   </body>
