@@ -6,6 +6,10 @@ cd tasklist
 
 //ir para o visual studio
 code .
+extensões para codar 
+ -adonisjs 4.1 snippets 
+ -standardjs
+
 node ace serve --watch (like nodemoon)
 
 //considerações
