@@ -16,6 +16,7 @@ node ace serve --watch (like nodemoon)
 //nesta versão do adonisjs não tem mais cli,,, é ACE directly
 node ace --help
 node ace serve --help (para info especificos de cada comando)
+npm install @adonisjs/lucid@alpha // para bancos de dados ORM object data manager
 
 //git
 git init
