@@ -23,6 +23,8 @@ node ace make:migration tasks
 node ace migration:run
 
 // L U C I D 
+npm install @adonisjs/shield@alpha - instalando shield 
+node ace invoke @adonisjs/shield
 
 //git
 git init

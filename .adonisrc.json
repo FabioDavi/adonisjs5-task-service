@@ -21,7 +21,8 @@
     "@adonisjs/core",
     "@adonisjs/session",
     "@adonisjs/view",
-    "@adonisjs/lucid"
+    "@adonisjs/lucid",
+    "@adonisjs/shield"
   ],
   "metaFiles": [
     ".env",
