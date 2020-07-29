@@ -22,6 +22,8 @@ node ace invoke @adonisjs/lucid //iniciando com lucid orm
 node ace make:migration tasks
 node ace migration:run
 
+// L U C I D 
+
 //git
 git init
 git push -u origin master
