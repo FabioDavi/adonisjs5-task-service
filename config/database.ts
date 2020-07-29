@@ -60,9 +60,9 @@ const databaseConfig: DatabaseConfig & { orm: Partial<OrmConfig> } = {
       connection: {
         host: Env.get('DB_HOST', '127.0.0.1') as string,
         port: Number(Env.get('DB_PORT', 3306)),
-        user: Env.get('DB_USER', 'lucid') as string,
-        password: Env.get('DB_PASSWORD', 'lucid') as string,
-        database: Env.get('DB_NAME', 'taskslist') as string,
+        user: Env.get('DB_USER', '') as string,
+        password: Env.get('DB_PASSWORD', '') as string,
+        database: Env.get('DB_NAME', '') as string,
       },
       healthCheck: false,
     },
