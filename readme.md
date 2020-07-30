@@ -26,6 +26,12 @@ node ace migration:run
 npm install @adonisjs/shield@alpha - instalando shield 
 node ace invoke @adonisjs/shield
 
+alteração em kernel.jsdoc-message
+acrescentar no register
+'Adonis/Addons/ShieldMiddleware',
+Route.get('/','TaskController.index')
+
+
 //git
 git init
 git push -u origin master

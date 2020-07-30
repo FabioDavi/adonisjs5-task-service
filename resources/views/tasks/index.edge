@@ -1,5 +1,29 @@
 @layout('layouts/app')
 
+
 @section('content')
-ds
+<div class="columns">
+    <div class="column is-three-fifths is-offset-one-fifth">
+      <div class="box">
+        <form action="/tasks" method="post">
+         
+            {{ csrfField() }}
+
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <input type="text" name="title" class="input" placeholder="What needs to be done?" value="">
+            </div>
+            <div class="control">
+              <button type="submit" class="button is-link">Add</button>
+            </div>
+          </div>
+
+         
+        </form>
+      </div>
+
+    </div>
+</div>
+
+
 @endsection
