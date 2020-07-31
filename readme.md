@@ -40,3 +40,6 @@ git remote add origi77n https://github.com/FabioDavi/adonisjs5-task-service.git
 git push -u origi77n master
 
 
+Foco
+versatilidade no portifolio dentro da mesma stack 
+(experiência e profundidade)

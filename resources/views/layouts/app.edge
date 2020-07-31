@@ -15,18 +15,14 @@
   </head>
   <body>
  
-    <nav class="navbar is-link">
-      <div class="container">
-        <div class="navbar-brand">
-          <a href="/" class="navbar-item">Taskist</a>
-        </div>
-      </div>
-  </nav>
+   
+  @include('partials/_navbar')
 
 
     <section class="section">
       <div class="container">
         @!section('content')
+        @!section('bar_sup')
       </div>
     </section>
   </body>
