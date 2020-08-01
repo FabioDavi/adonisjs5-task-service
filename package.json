@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "dev": "adonis serve --dev --debug",
     "build": "node ace build",
     "start": "node ace serve --watch",
     "lint": "eslint . --ext=.ts"
