@@ -8,7 +8,7 @@ cd tasklist
 code .
 extensões para codar 
  -adonisjs 4.1 snippets 
- -standardjs
+ -standardjs 
 
 node ace serve --watch (like nodemoon)
 
