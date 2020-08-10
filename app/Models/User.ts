@@ -4,7 +4,11 @@ import {
   column,
   beforeSave,
   BaseModel,
+  hasMany,
+  HasMany,
 } from '@ioc:Adonis/Lucid/Orm'
+import Task from './Task'
+
 
 export default class User extends BaseModel {
   @column({ isPrimary: true })
@@ -34,4 +38,8 @@ export default class User extends BaseModel {
       user.password = await Hash.make(user.password)
     }
   }
+
+  @hasMany(() => Task)
+  public tasks : HasMany<typeof Task>
+  
 }

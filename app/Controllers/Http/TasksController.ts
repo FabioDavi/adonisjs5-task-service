@@ -2,13 +2,16 @@ import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Task from 'App/Models/Task'
 import { rules, schema } from '@ioc:Adonis/Core/Validator'
 
+
 export default class TasksController {
-  public async index ({view}:HttpContextContract){
-    const tasks =await Task.all()
-    return view.render('tasks/index', {tasks})
+  public async index ({view, auth}:HttpContextContract){
+    const user = auth.user
+    await user?.preload('tasks')
+
+    return view.render('tasks/index', {tasks:user?.tasks})
   }
   
-  public async store ({request, response, session}:HttpContextContract){
+  public async store ({request, response, session, auth}:HttpContextContract){
     const validationSchema = schema.create({
       title: schema.string({ trim: true }, [
         rules.maxLength(255),
@@ -23,14 +26,11 @@ export default class TasksController {
       },
     })
 
-    await Task.create({
+    await auth.user?.related('tasks').create({
       //title: request.input('title'),
       title: validatedData.title,
     })
-
     session.flash('notification', 'task added')
-
-
     return response.redirect('back')
   }
 
