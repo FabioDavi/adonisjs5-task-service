@@ -1,4 +1,6 @@
 //criado o nome do projeto 'tasklist' no adonis 5
+//https://www.youtube.com/watch?v=VIvBeEj9QVg&list=PL9gT3zlT0C1Ngrii-NCPpuRvUO1mIGzwf&index=1
+//https://github.com/mezielabs/taskist
 - npx create-adonis-ts-app tasklist
 
 // ir para a pasta do projeto
@@ -25,6 +27,14 @@ node ace migration:run
 // L U C I D 
 npm install @adonisjs/shield@alpha - instalando shield 
 node ace invoke @adonisjs/shield
+
+//A U T H
+npm i @adonisjs/auth@alpha
+node ace invoke @adonisjs/auth
+
+
+
+
 
 alteração em kernel.jsdoc-message
 acrescentar no register

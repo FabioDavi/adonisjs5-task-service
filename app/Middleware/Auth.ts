@@ -23,13 +23,18 @@ export default class AuthMiddleware {
    * during the current request.
    */
   protected async authenticate (auth: HttpContextContract['auth'], guards: string[]) {
-  
+    for (let guard of guards) {
+      if (await auth.use(guard).check()) {
+        /**
+         * Instruct auth to use the given guard as the default guard for
+         * the rest of the request, since the user authenticated
+         * succeeded here
+         */
+        auth.defaultGuard = guard
+        return true
+      }
+    }
 
-    guards = ['web']
-    auth.defaultGuard = guards.toString()
-    return true
-     
- 
     /**
      * Unable to authenticate using any guard
      */
@@ -48,7 +53,7 @@ export default class AuthMiddleware {
      * Uses the user defined guards or the default guard mentioned in
      * the config file
      */
-    const guards = customGuards.length ? customGuards : [auth.name] 
+    const guards = customGuards.length ? customGuards : [auth.name]
     await this.authenticate(auth, guards)
     await next()
   }
